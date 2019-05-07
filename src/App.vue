@@ -2,7 +2,9 @@
   <div id="app">
     <AppContent />
     <AppHeader />
-    <AppSideBar />
+    <AppSideBar>
+      <h1>Radesign</h1>
+    </AppSideBar>
   </div>
 </template>
 
@@ -49,6 +51,12 @@ export default {
 
 .app-side-bar {
   height: 100vh;
+
+  h1 {
+    color: var(--color-dark-1);
+    font-size: 1.4rem;
+    margin: 1.5rem;
+  }
 }
 
 </style>
