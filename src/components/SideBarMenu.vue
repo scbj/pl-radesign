@@ -1,5 +1,5 @@
 <template>
-  <SideBarGroup title="Menu">
+  <SideBarGroup title="Menu" color="#ed0a20">
       <ul>
         <li v-for="item in menuItems" :key="item.path">
           <router-link :to="item.path">{{ item.label }}</router-link>

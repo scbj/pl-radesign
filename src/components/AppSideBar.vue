@@ -23,4 +23,9 @@ export default {
   background: var(--color-light-1);
   border-right: var(--border-1)
 }
+
+.side-bar-group {
+  margin: 1.5rem;
+  margin-top: 3.5rem;
+}
 </style>

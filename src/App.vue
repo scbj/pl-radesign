@@ -54,7 +54,7 @@ export default {
 
   h1 {
     color: var(--color-dark-1);
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin: 1.5rem;
   }
 }
