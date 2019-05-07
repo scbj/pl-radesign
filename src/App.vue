@@ -1,29 +1,54 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <AppContent />
+    <AppHeader />
+    <AppSideBar />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import AppContent from '@/components/AppContent.vue'
+import AppHeader from '@/components/AppHeader.vue'
+import AppSideBar from '@/components/AppSideBar.vue'
+
+export default {
+  components: {
+    AppContent,
+    AppHeader,
+    AppSideBar
   }
 }
+</script>
+
+<style lang="scss">
+@import '@/assets/styles/base.scss';
+@import '@/assets/styles/text.scss';
+@import '@/assets/styles/colors.scss';
+
+#app {
+  color: var(--color-light-3);
+  background: var(--color-light-2);
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "side-bar header"
+    "side-bar content";
+  min-height: 100vh;
+}
+
+.app-content { grid-area: content }
+.app-header { grid-area: header }
+.app-side-bar { grid-area: side-bar }
+
+.app-header,
+.app-side-bar {
+  position: sticky;
+  top: 0;
+}
+
+.app-side-bar {
+  height: 100vh;
+}
+
 </style>
