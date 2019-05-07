@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600');
+@import 'mixins.scss';
+
+html {
+  $min-width: 320px;
+  $max-width: 1880px;
+  $min-font: 12px;
+  $max-font: 16px;
+  @include fluid-type($min-width, $max-width, $min-font, $max-font);
+}
 
 body {
   font-family: 'Poppins', sans-serif;
