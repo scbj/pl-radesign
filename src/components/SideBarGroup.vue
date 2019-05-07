@@ -33,13 +33,13 @@ export default {
 <style lang="scss" scoped>
 .side-bar-group {
   border-bottom: var(--border-1);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 h2 {
   color: var(--color-dark-1);
   font-size: 1.4rem;
-  margin-left: 1.5em;
+  margin-left: 2.5em;
   position: relative;
 
   &::before {
@@ -58,6 +58,6 @@ h2 {
 
 nav {
   margin-top: 2.4rem;
-  margin-left: 1.5em;
+  margin-bottom: 2.4rem;
 }
 </style>

@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import TeamCollect from './views/TeamCollect.vue'
+import TeamData from './views/TeamData.vue'
+import TeamProject from './views/TeamProject.vue'
 
 Vue.use(Router)
 
@@ -9,9 +12,24 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/collect',
+      name: 'collect',
+      component: TeamCollect
+    },
+    {
+      path: '/data',
+      name: 'data',
+      component: TeamData
+    },
+    {
+      path: '/project',
+      name: 'project',
+      component: TeamProject
     }
     // {
     //   path: '/about',
