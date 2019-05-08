@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "svg": "vsvg -s ./src/assets/svg -t ./src/assets/icons",
     "clean": "rm -rf node_modules"
   },
   "dependencies": {
@@ -24,6 +25,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
+    "vue-svgicon": "^3.2.6",
     "vue-template-compiler": "^2.5.21"
   }
 }
