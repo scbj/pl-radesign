@@ -18,7 +18,6 @@ export default {
 <style lang="scss" scoped>
 .app-header {
   background: var(--color-light-1);
-  padding: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -26,10 +25,8 @@ export default {
 
 .icon-search {
   fill: var(--color-light-3);
+  margin: 2rem;
+  margin-left: 3rem;
   width: 1.5em;
-}
-
-span {
-  margin-left: 1.5em;
 }
 </style>
