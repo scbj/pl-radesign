@@ -31,7 +31,7 @@ export default {
   color: var(--color-light-3);
   background: var(--color-light-2);
   display: grid;
-  grid-template-columns: 340px 1fr;
+  grid-template-columns: 270px 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas:
     "side-bar header"

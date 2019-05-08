@@ -5,13 +5,13 @@ html {
   $min-width: 320px;
   $max-width: 1880px;
   $min-font: 12px;
-  $max-font: 16px;
+  $max-font: 14.5px;
   @include fluid-type($min-width, $max-width, $min-font, $max-font);
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  letter-spacing: .02em;
+  letter-spacing: .03em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
