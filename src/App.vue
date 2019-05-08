@@ -53,8 +53,6 @@ export default {
   height: 100vh;
 
   h1 {
-    font-size: 1.6rem;
-    color: var(--color-dark-1);
     margin: 1.5rem;
   }
 }

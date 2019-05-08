@@ -1,10 +1,10 @@
 <template>
   <SideBarGroup title="Menu" color="#ed0a20">
       <ul>
-        <li v-for="item in menuItems" :key="item.path">
+        <li v-for="item in items" :key="item.path">
           <router-link :to="item.path" class="link" active-class="active">
-            <IconCopy />
-            <span>{{ item.label }}</span>
+            <svgicon :icon="'icon-noun-' + item.icon"></svgicon>
+            <h3>{{ item.label }}</h3>
           </router-link>
         </li>
       </ul>
@@ -12,36 +12,17 @@
 </template>
 
 <script>
-import IconCopy from '@/components/IconCopy.vue'
+import '../assets/icons'
+import { menuItems } from '@/assets/data/side-bar'
 import SideBarGroup from '@/components/SideBarGroup.vue'
 
 export default {
   components: {
-    IconCopy,
     SideBarGroup
   },
 
-  data () {
-    return {
-      menuItems: [
-        {
-          label: 'Home page',
-          path: '/home'
-        },
-        {
-          label: 'Team data',
-          path: '/data'
-        },
-        {
-          label: 'Team project',
-          path: '/project'
-        },
-        {
-          label: 'Team collect',
-          path: '/collect'
-        }
-      ]
-    }
+  computed: {
+    items: () => menuItems
   }
 }
 </script>
@@ -59,19 +40,24 @@ $highlight-color: #2e65fd;
   &.active {
     background: linear-gradient(to right, rgba($highlight-color, 12%), rgba($highlight-color, 0%));
     border-color: $highlight-color;
-    color: $highlight-color;
-    font-weight: bold;
 
-    > .icon-copy {
+    > h3 {
+      color: $highlight-color;
+      font-weight: bold;
+    }
+
+    > .svg-icon {
       fill: $highlight-color;
     }
   }
 }
 
-.icon-copy {
+.svg-icon {
   fill: var(--color-light-3);
-  margin: .8em 1.4em;
+  margin: 1em 1.4em;
   margin-left: calc(1.5em + 1.4em);
-  width: 2em;
+  $size: 1.8em;
+  height: $size;
+  width: $size;
 }
 </style>

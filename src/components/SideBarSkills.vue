@@ -1,7 +1,7 @@
 <template>
   <SideBarGroup title="Skills">
       <ul>
-        <li v-for="(item, key) in skillItems" :key="key">
+        <li v-for="(item, key) in items" :key="key">
           <router-link :to="'/skill/'+ item.label">{{ item.label }}</router-link>
         </li>
       </ul>
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { skillItems } from '@/assets/data/side-bar'
 import SideBarGroup from '@/components/SideBarGroup.vue'
 
 export default {
@@ -16,27 +17,8 @@ export default {
     SideBarGroup
   },
 
-  data () {
-    return {
-      skillItems: [
-        {
-          label: 'ui/ux design',
-          count: 178
-        },
-        {
-          label: 'web design',
-          count: 354
-        },
-        {
-          label: 'illustrations',
-          count: 78
-        },
-        {
-          label: 'Dynamic effect',
-          count: 132
-        }
-      ]
-    }
+  computed: {
+    items: () => skillItems
   }
 }
 </script>

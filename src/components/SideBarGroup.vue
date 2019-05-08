@@ -33,12 +33,10 @@ export default {
 <style lang="scss" scoped>
 .side-bar-group {
   border-bottom: var(--border-1);
-  font-size: 1.05rem;
 }
 
 h2 {
   color: var(--color-dark-1);
-  font-size: 1.3rem;
   margin-left: 2.5em;
   position: relative;
 
