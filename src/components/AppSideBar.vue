@@ -25,6 +25,6 @@ export default {
 }
 
 .side-bar-group {
-  margin-top: 3.5rem;
+  padding-top: 3.5rem;
 }
 </style>
