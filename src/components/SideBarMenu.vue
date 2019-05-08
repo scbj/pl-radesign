@@ -4,7 +4,7 @@
         <li v-for="item in items" :key="item.path">
           <router-link :to="item.path" class="link" active-class="active">
             <svgicon :icon="'icon-noun-' + item.icon"></svgicon>
-            <h3>{{ item.label }}</h3>
+            <h3 class="label">{{ item.label }}</h3>
           </router-link>
         </li>
       </ul>
@@ -41,9 +41,9 @@ $highlight-color: #2e65fd;
     background: linear-gradient(to right, rgba($highlight-color, 12%), rgba($highlight-color, 0%));
     border-color: $highlight-color;
 
-    > h3 {
+    > .label {
       color: $highlight-color;
-      font-weight: bold;
+      font-weight: 600;
     }
 
     > .svg-icon {

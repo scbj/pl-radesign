@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss">
 @import '@/assets/styles/base.scss';
-@import '@/assets/styles/text.scss';
+@import '@/assets/styles/fonts.scss';
 @import '@/assets/styles/colors.scss';
 
 #app {
