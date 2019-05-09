@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 .base-icon {
-  fill: var(--color-light-4);
+  fill: var(--color-light-5);
   $size: 2em;
   height: $size;
   width: $size;

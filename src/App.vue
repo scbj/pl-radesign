@@ -28,7 +28,7 @@ export default {
 @import '@/assets/styles/colors.scss';
 
 #app {
-  color: var(--color-light-3);
+  color: var(--color-light-5);
   background: var(--color-light-2);
   display: grid;
   grid-template-columns: 270px 1fr;

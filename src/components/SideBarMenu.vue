@@ -53,7 +53,7 @@ $highlight-color: #2e65fd;
 }
 
 .base-icon {
-  fill: var(--color-light-3);
+  fill: var(--color-light-5);
   margin: 1em 1.4em;
   margin-left: calc(1.5em + 1.4em);
   $size: 1.8em;
