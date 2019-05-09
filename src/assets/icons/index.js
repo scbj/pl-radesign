@@ -1,6 +1,11 @@
 /* eslint-disable */
 require('./icon-noun-activity')
+require('./icon-noun-add')
+require('./icon-noun-bell')
 require('./icon-noun-check-mark')
+require('./icon-noun-chevron-left')
+require('./icon-noun-chevron-right')
+require('./icon-noun-cog')
 require('./icon-noun-copy')
 require('./icon-noun-folder')
 require('./icon-noun-home')

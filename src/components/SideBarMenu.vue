@@ -3,7 +3,7 @@
       <ul>
         <li v-for="item in items" :key="item.path">
           <router-link :to="item.path" class="link" active-class="active">
-            <svgicon :icon="'icon-noun-' + item.icon"></svgicon>
+            <BaseIcon :name="item.icon" />
             <h3 class="label">{{ item.label }}</h3>
           </router-link>
         </li>
@@ -52,7 +52,7 @@ $highlight-color: #2e65fd;
   }
 }
 
-.svg-icon {
+.base-icon {
   fill: var(--color-light-3);
   margin: 1em 1.4em;
   margin-left: calc(1.5em + 1.4em);

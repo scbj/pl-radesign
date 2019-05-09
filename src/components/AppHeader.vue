@@ -1,16 +1,25 @@
 <template>
   <header class="app-header">
-    <IconSearch />
-    <span>Search for members and works...</span>
+    <BaseIcon class="icon-search" name="search" />
+    <div class="search">
+      <span>Search for members and works...</span>
+    </div>
+    <div class="separator" />
+    <BaseIcon name="bell" />
+    <div class="separator" />
+    <BaseIcon name="cog" />
+    <div class="separator" />
+    <HeaderUser class="profil" />
   </header>
 </template>
 
 <script>
-import IconSearch from '@/components/IconSearch.vue'
+import '../assets/icons'
+import HeaderUser from '@/components/HeaderUser.vue'
 
 export default {
   components: {
-    IconSearch
+    HeaderUser
   }
 }
 </script>
@@ -23,10 +32,25 @@ export default {
   align-items: center;
 }
 
-.icon-search {
-  fill: var(--color-light-3);
-  margin: 2rem;
-  margin-left: 3rem;
-  width: 1.5em;
+.search {
+  flex-grow: 1;
+}
+
+.separator {
+  align-self: stretch;
+  border-right: var(--border-1)
+}
+
+.base-icon {
+  margin: 0 1.5rem;
+
+  &.icon-search {
+    margin-left: 2.7rem;
+    margin-right: 1.8rem;
+  }
+}
+
+.profil {
+  margin-right: 3rem;
 }
 </style>
