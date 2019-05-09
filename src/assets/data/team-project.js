@@ -1,17 +1,32 @@
 export const tasks = [
   {
-    name: 'Short Video'
+    name: 'Short Video',
+    owner: {
+      avatar: require('@/assets/images/avatars/girl.png')
+    }
   },
   {
-    name: 'Mobile Page'
+    name: 'Mobile Page',
+    owner: {
+      avatar: require('@/assets/images/avatars/man-3.png')
+    }
   },
   {
-    name: 'Web Design'
+    name: 'Web Design',
+    owner: {
+      avatar: require('@/assets/images/avatars/man.png')
+    }
   },
   {
-    name: 'Taxi-hailing'
+    name: 'Taxi-hailing',
+    owner: {
+      avatar: require('@/assets/images/avatars/girl-1.png')
+    }
   },
   {
-    name: 'Illustrations'
+    name: 'Illustrations',
+    owner: {
+      avatar: require('@/assets/images/avatars/man-4.png')
+    }
   }
 ]

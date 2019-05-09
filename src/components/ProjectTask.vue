@@ -2,7 +2,7 @@
   <BaseCard :class="{ active }" class="project-task">
     <h3 class="name">{{ name | upperCase }}</h3>
     <span>{{ owner }}</span>
-    <img class="picture" src="http://anything-ispossible.com/wp-content/uploads/2018/06/amaysancha-profil.jpg" alt="Profil picture">
+    <img class="picture" :src="picture" alt="Profil picture">
   </BaseCard>
   <!-- ff3974 -->
 </template>
@@ -21,6 +21,10 @@ export default {
       required: true
     },
     owner: {
+      type: String,
+      required: true
+    },
+    picture: {
       type: String,
       required: true
     }
