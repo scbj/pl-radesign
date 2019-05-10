@@ -5,7 +5,9 @@
       <span>Search for members and works...</span>
     </div>
     <div class="separator" />
-    <BaseIcon name="bell" />
+    <div class="notification">
+      <BaseIcon name="bell" />
+    </div>
     <div class="separator" />
     <BaseIcon name="cog" />
     <div class="separator" />
@@ -47,6 +49,29 @@ export default {
   &.icon-search {
     margin-left: 2.7rem;
     margin-right: 1.8rem;
+  }
+}
+
+.notification {
+  margin: 0 1.5rem;
+  position: relative;
+
+  & > .base-icon {
+    margin: 0;
+  }
+
+  &::after {
+    content: '';
+    background: #ed0a20;
+    border: .11rem solid;
+    border-color: var(--color-light-1);
+    border-radius: 50%;
+    $size: .8rem;
+    width: $size;
+    height: $size;
+    position: absolute;
+    top: -0.3rem;
+    right: .1rem;
   }
 }
 

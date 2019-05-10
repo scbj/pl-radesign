@@ -1,5 +1,5 @@
 <template>
-  <BaseCard :class="{ active }" class="project-task">
+  <BaseCard class="project-task">
     <h3 class="name">{{ name | upperCase }}</h3>
     <span>{{ owner }}</span>
     <img class="picture" :src="picture" alt="Profil picture">
@@ -12,10 +12,6 @@ import { upperCase } from '@/filters/string'
 
 export default {
   props: {
-    active: {
-      type: Boolean,
-      default: false
-    },
     name: {
       type: String,
       required: true
@@ -43,14 +39,19 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  cursor: pointer;
 
-  &.active {
+  &:hover {
     .name {
       color: #ff3974;
     }
 
     span {
       color: var(--color-dark-2);
+    }
+
+    .picture {
+      border-color: #ff3974;
     }
   }
 }
@@ -65,6 +66,7 @@ span {
 }
 
 .picture {
+  border: 1px solid transparent;
   border-radius: 50%;
   $size: 5rem;
   width: $size;
