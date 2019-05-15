@@ -33,6 +33,7 @@ export default {
 .tasks {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .base-card {

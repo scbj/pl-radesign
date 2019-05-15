@@ -29,6 +29,7 @@ export default {
 <style lang="scss" scoped>
 .app-header {
   background: var(--color-light-1);
+  border-bottom: var(--border-1);
   display: flex;
   flex-direction: row;
   align-items: center;

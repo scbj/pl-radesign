@@ -1,9 +1,11 @@
 <template>
   <section class="app-side-bar">
     <slot></slot>
-    <SideBarMenu />
-    <SideBarSkills class="stretch" />
-    <ThemeSwitch />
+    <div class="container">
+      <SideBarMenu />
+      <SideBarSkills class="stretch" />
+      <ThemeSwitch />
+    </div>
   </section>
 </template>
 
@@ -35,5 +37,9 @@ export default {
 
 .stretch {
   flex-grow: 1;
+}
+
+.container {
+  overflow-y: auto;
 }
 </style>
