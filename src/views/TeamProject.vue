@@ -10,7 +10,6 @@ import TaskList from '@/components/TaskList.vue'
 import TaskTimeline from '@/components/TaskTimeline.vue'
 
 import { tasks } from '@/assets/data/team-project.js'
-import { sort } from '@/transform/array.js'
 
 export default {
   components: {
@@ -19,10 +18,7 @@ export default {
   },
 
   computed: {
-    unorderedTasks: () => tasks,
-    tasks () {
-      return sort(this.unorderedTasks, task => task.name)
-    }
+    tasks: () => tasks
   }
 }
 </script>
