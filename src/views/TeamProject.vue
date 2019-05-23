@@ -2,7 +2,7 @@
   <div class="team-project">
     <ul class="tasks">
       <li v-for="(task, index) in tasks" :key="index">
-        <ProjectTask :name="task.name" :active="index === 0" owner="Leader" :picture="task.owner.avatar" />
+        <ProjectTask :task="task" :active="index === 0" owner="Leader" />
       </li>
     </ul>
     <BaseCard>Project</BaseCard>

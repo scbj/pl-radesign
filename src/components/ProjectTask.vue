@@ -1,8 +1,8 @@
 <template>
   <BaseCard class="project-task">
-    <h3 class="name">{{ name | upperCase }}</h3>
+    <h3 class="name">{{ task.name | upperCase }}</h3>
     <span>{{ owner }}</span>
-    <img class="picture" :src="picture" alt="Profil picture">
+    <img class="picture" :src="task.owner.avatar" alt="Profil picture">
   </BaseCard>
   <!-- ff3974 -->
 </template>
@@ -12,15 +12,11 @@ import { upperCase } from '@/filters/string'
 
 export default {
   props: {
-    name: {
-      type: String,
+    task: {
+      type: Object,
       required: true
     },
     owner: {
-      type: String,
-      required: true
-    },
-    picture: {
       type: String,
       required: true
     }

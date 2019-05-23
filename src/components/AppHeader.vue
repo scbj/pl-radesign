@@ -37,6 +37,7 @@ export default {
 
 .search {
   flex-grow: 1;
+  cursor: text;
 }
 
 .separator {
