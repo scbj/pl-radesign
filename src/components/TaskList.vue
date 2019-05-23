@@ -1,7 +1,7 @@
 <template>
   <ul class="task-list">
     <li v-for="(task, index) in tasks" :key="index">
-      <ProjectTask
+      <TaskItem
         class="task"
         :task="task"
         :active="index === 0"
@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import ProjectTask from '@/components/ProjectTask.vue'
+import TaskItem from '@/components/TaskItem.vue'
 
 export default {
   components: {
-    ProjectTask
+    TaskItem
   },
 
   props: {

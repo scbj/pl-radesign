@@ -1,10 +1,9 @@
 <template>
-  <BaseCard class="project-task">
+  <BaseCard class="task-item">
     <h3 class="name">{{ task.name | upperCase }}</h3>
     <span>{{ owner }}</span>
     <img class="picture" :src="task.owner.avatar" alt="Profil picture">
   </BaseCard>
-  <!-- ff3974 -->
 </template>
 
 <script>
@@ -27,7 +26,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.project-task {
+.task-item {
   $size: 15rem;
   height: $size;
   width: $size;
