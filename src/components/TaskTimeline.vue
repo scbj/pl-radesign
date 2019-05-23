@@ -60,14 +60,14 @@ export default {
     },
 
     days () {
-      // TODO: Refactoriser cette fonction...
-      // Generate an array of number from 1 to n
-      const numbers = [ 1 ]
-      const lastNumber = () => numbers[numbers.length - 1]
-      while (lastNumber() < 29) {
-        numbers.push(lastNumber() + 2)
+      // Generates an array of numbers from 1 to n with a step of 2
+      const labels = []
+      const labelCount = 15
+      const step = 2
+      for (let i = 1; labels.length < labelCount; i += step) {
+        labels.push(i)
       }
-      return numbers
+      return labels
     }
   }
 }
