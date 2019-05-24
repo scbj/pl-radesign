@@ -5,7 +5,17 @@
       :class="{ highlighted }"
       :style="color"
     >
-      <span>About {{ task.dayCount }} days.</span>
+      <span class="label">About {{ task.dayCount }} days.</span>
+      <div
+        v-for="(member, index) in members"
+        :key="index"
+        class="avatar"
+      >
+        <img
+          :src="member.avatar"
+          alt="Profil picture"
+        >
+      </div>
     </div>
   </transition>
 </template>
@@ -34,6 +44,10 @@ export default {
       return {
         '--color': `${r}, ${g}, ${b}`
       }
+    },
+
+    members () {
+      return this.task.members || []
     }
   },
 
@@ -65,7 +79,7 @@ $easing: cubic-bezier(.19, 1, .22, 1);
   border: 1px solid rgba(var(--color), 0.5);
   border-left: 4px solid rgba(var(--color), 1);
   border-radius: 4px;
-  padding: 1em;
+  padding: .7em 1.5em;
   width: 100%;
   display: flex;
   align-items: center;
@@ -81,6 +95,36 @@ $easing: cubic-bezier(.19, 1, .22, 1);
     box-shadow:
       0 2px 12px rgba(var(--color), 0.2),
       0 5px 12px -4px rgba(var(--color), 0.15);
+  }
+}
+
+.label {
+  flex-grow: 1;
+}
+
+.avatar {
+  display: inline-block;
+  $size-image: 1.8rem;
+  width: 1.3rem;
+  height: $size-image;
+  z-index: 1;
+
+  & > img {
+    background-color: var(--color-light-2);
+    border: 1px solid white;
+    border-radius: 50%;
+    width: $size-image;
+    height: $size-image;
+    object-fit: cover;
+    transition: transform .2s $easing;
+  }
+
+  &:hover {
+    z-index: 2;
+
+    & > img {
+      transform: scale(1.08);
+    }
   }
 }
 
