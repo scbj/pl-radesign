@@ -1,6 +1,12 @@
 <template>
   <BaseCard class="task-timeline" :style="style">
     <div class="controls">
+      <div class="month">
+        <h2>April 3, 2019 </h2>
+        <BaseIcon class="next-month" name="chevron-right" />
+      </div>
+      <div class="scale">Day Week Month Year</div>
+      <BaseIcon class="add-task" name="add" />
     </div>
     <div class="timeline">
       <!-- Header: Task name -->
@@ -76,10 +82,34 @@ export default {
 <style lang="scss" scoped>
 .task-timeline {
   margin: 1rem;
+
+  &.base-card {
+    padding: 0;
+  }
 }
 
 .controls {
-  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3rem;
+
+  .next-month {
+    margin-left: 1rem;
+  }
+
+  .add-task,
+  .next-month {
+      fill: #2e65fd;
+  }
+}
+
+.month {
+  h2 {
+    display: inline-block;
+    font-weight: 5  00;
+    color: var(--color-dark-1);
+  }
 }
 
 .timeline {
@@ -88,6 +118,8 @@ export default {
   grid-template-rows: repeat(var(--task-count), 50px);
   grid-row-gap: 2rem;
   align-items: center;
+  padding: 3rem;
+  padding-top: 0;
 }
 
 .task-name {
