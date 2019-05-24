@@ -2,6 +2,11 @@
   "name": "radesign",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Sacha",
+    "email": "contact@scbj.io",
+    "url": "https://scbj.io"
+  },
   "scripts": {
     "serve": "yarn svg && vue-cli-service serve",
     "build": "yarn svg && vue-cli-service build",

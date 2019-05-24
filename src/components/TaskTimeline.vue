@@ -5,35 +5,50 @@
         <h2>April 3, 2019 </h2>
         <BaseIcon class="next-month" name="chevron-right" />
       </div>
-      <div class="scale">Day Week Month Year</div>
+      <div class="scale">
+        Day Week Month Year
+      </div>
       <BaseIcon class="add-task" name="add" />
     </div>
     <div class="timeline">
       <!-- Header: Task name -->
       <template v-for="(task, index) in tasks">
-        <span class="task-name" :key="`task-${index}`" :style="{ '--row': index + 1 }">
+        <span
+          :key="`task-${index}`"
+          class="task-name"
+          :style="{ '--row': index + 1 }"
+        >
           {{ task.name | upperCase }}
         </span>
       </template>
 
       <!-- Legend: Days of the month -->
       <template v-for="day in days">
-        <span class="day" :key="`day-${day}`" :style="{ '--column': day + 1}">
+        <span
+          :key="`day-${day}`"
+          class="day"
+          :style="{ '--column': day + 1}"
+        >
           {{ day }}th
         </span>
       </template>
 
       <template v-for="day in days">
-        <b class="separator" :key="`separator-${day}`" :style="{ '--column': day + 1 }"  />
+        <b
+          :key="`separator-${day}`"
+          class="separator"
+          :style="{ '--column': day + 1 }"
+        />
       </template>
 
       <template v-for="(task, index) in tasks">
         <TaskTimelineEvent
+          :key="`event-${index}`"
           class="event"
           :color="task.color"
-          :key="`event-${index}`"
           :style="{ '--row': index + 1, '--column': `${task.dayStart + 1}/span ${task.dayCount}`}"
-          :duration="task.dayCount" />
+          :duration="task.dayCount"
+        />
       </template>
     </div>
   </BaseCard>
@@ -49,14 +64,14 @@ export default {
     TaskTimelineEvent
   },
 
+  filters: { upperCase },
+
   props: {
     tasks: {
       type: Array,
       required: true
     }
   },
-
-  filters: { upperCase },
 
   computed: {
     style () {

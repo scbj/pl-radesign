@@ -1,9 +1,11 @@
 <template>
   <div class="header-user">
     <div class="picture">
-      <img src="http://anything-ispossible.com/wp-content/uploads/2018/06/amaysancha-profil.jpg" alt="Profil picture">
+      <img :src="require('@/assets/images/avatars/profil.jpg')" alt="Profil picture">
     </div>
-    <h2 class="username">Never_stop</h2>
+    <h2 class="username">
+      Never_stop
+    </h2>
   </div>
   <!-- Green dot: #00d56f -->
 </template>
