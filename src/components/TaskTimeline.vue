@@ -45,9 +45,8 @@
         <TaskTimelineEvent
           :key="`event-${index}`"
           class="event"
-          :color="task.color"
+          :task="task"
           :style="{ '--row': index + 1, '--column': `${task.dayStart + 1}/span ${task.dayCount}`}"
-          :duration="task.dayCount"
         />
       </template>
     </div>

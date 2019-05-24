@@ -1,15 +1,28 @@
 <template>
-  <BaseCard class="task-item">
-    <h3 class="name">{{ task.name | upperCase }}</h3>
+  <BaseCard
+    class="task-item"
+    @mouseenter.native="emitEvent(true)"
+    @mouseleave.native="emitEvent(false)"
+  >
+    <h3 class="name">
+      {{ task.name | upperCase }}
+    </h3>
     <span>{{ owner }}</span>
-    <img class="picture" :src="task.owner.avatar" alt="Profil picture">
+    <img
+      class="picture"
+      :src="task.owner.avatar"
+      alt="Profil picture"
+    >
   </BaseCard>
 </template>
 
 <script>
-import { upperCase } from '@/filters/string'
+import { EventBus } from '@/event-bus.js'
+import { upperCase } from '@/filters/string.js'
 
 export default {
+
+  filters: { upperCase },
   props: {
     task: {
       type: Object,
@@ -21,7 +34,14 @@ export default {
     }
   },
 
-  filters: { upperCase }
+  methods: {
+    emitEvent (highlighted) {
+      EventBus.$emit('ui@task-highlighting:toggle', {
+        highlighted,
+        task: this.task
+      })
+    }
+  }
 }
 </script>
 
