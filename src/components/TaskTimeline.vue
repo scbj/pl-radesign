@@ -11,8 +11,8 @@
       <BaseIcon class="add-task" name="add" />
     </div>
     <div class="timeline">
-      <!-- Header: Task name -->
       <template v-for="(task, index) in tasks">
+        <!-- Header: Task name -->
         <span
           :key="`task-${index}`"
           class="task-name"
@@ -20,10 +20,17 @@
         >
           {{ task.name | upperCase }}
         </span>
+        <!-- Events -->
+        <TaskTimelineEvent
+          :key="`event-${index}`"
+          class="event"
+          :task="task"
+          :style="{ '--row': index + 1, '--column': `${task.dayStart + 1}/span ${task.dayCount}`}"
+        />
       </template>
 
-      <!-- Legend: Days of the month -->
       <template v-for="day in days">
+        <!-- Legend: Days of the month -->
         <span
           :key="`day-${day}`"
           class="day"
@@ -31,22 +38,11 @@
         >
           {{ day }}th
         </span>
-      </template>
-
-      <template v-for="day in days">
+        <!-- Separators -->
         <b
           :key="`separator-${day}`"
           class="separator"
           :style="{ '--column': day + 1 }"
-        />
-      </template>
-
-      <template v-for="(task, index) in tasks">
-        <TaskTimelineEvent
-          :key="`event-${index}`"
-          class="event"
-          :task="task"
-          :style="{ '--row': index + 1, '--column': `${task.dayStart + 1}/span ${task.dayCount}`}"
         />
       </template>
     </div>

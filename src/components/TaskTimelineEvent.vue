@@ -3,7 +3,7 @@
     <div
       class="task-timeline-event"
       :class="{ highlighted }"
-      :style="{ '--color': `${color.r}, ${color.g}, ${color.b}` }"
+      :style="color"
     >
       <span>About {{ task.dayCount }} days.</span>
     </div>
@@ -28,8 +28,12 @@ export default {
   },
 
   computed: {
+    /** Returns CSS custom properties */
     color () {
-      return this.task.color
+      const { r, g, b } = this.task.color
+      return {
+        '--color': `${r}, ${g}, ${b}`
+      }
     }
   },
 
@@ -52,6 +56,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$easing: cubic-bezier(.19, 1, .22, 1);
+
 .task-timeline-event {
   font-size: 0.8rem;
   color: rgba(var(--color), 1);
@@ -67,7 +73,7 @@ export default {
     0 2px 12px rgba(var(--color), 0),
     0 5px 12px -4px rgba(var(--color), 0);
   cursor: pointer;
-  transition: all .6s cubic-bezier(.19, 1, .22, 1);
+  transition: all .6s $easing;
 
   &.highlighted,
   &:hover {
@@ -80,7 +86,7 @@ export default {
 
 .fade-enter-active {
   transform-origin: 0% 50%;
-  transition: all 1.2s cubic-bezier(.19, 1, .22, 1) .2s;
+  transition: all 1.2s $easing .2s;
 }
 
 .fade-enter {
