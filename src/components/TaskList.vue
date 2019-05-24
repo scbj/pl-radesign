@@ -5,7 +5,8 @@
         class="task"
         :task="task"
         :active="index === 0"
-        owner="Leader" />
+        owner="Leader"
+      />
     </li>
   </ul>
 </template>

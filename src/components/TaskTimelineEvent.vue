@@ -55,7 +55,7 @@ export default {
 .task-timeline-event {
   font-size: 0.8rem;
   color: rgba(var(--color), 1);
-  background-color: rgba(var(--color), 0.15);
+  background-color: rgba(var(--color), 0.2);
   border: 1px solid rgba(var(--color), 0.5);
   border-left: 4px solid rgba(var(--color), 1);
   border-radius: 4px;
@@ -71,7 +71,7 @@ export default {
 
   &.highlighted,
   &:hover {
-    background-color: rgba(var(--color), 0.25);
+    background-color: rgba(var(--color), 0.3);
     box-shadow:
       0 2px 12px rgba(var(--color), 0.2),
       0 5px 12px -4px rgba(var(--color), 0.15);
