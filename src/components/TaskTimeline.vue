@@ -115,6 +115,7 @@ export default {
   .add-task,
   .next-month {
       fill: #2e65fd;
+      cursor: pointer;
   }
 }
 
