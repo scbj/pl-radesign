@@ -1,6 +1,6 @@
 <template>
   <section class="app-side-bar">
-    <slot></slot>
+    <slot />
     <div class="container">
       <SideBarMenu />
       <SideBarSkills class="stretch" />

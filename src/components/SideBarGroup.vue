@@ -1,6 +1,8 @@
 <template>
   <section class="side-bar-group">
-    <h2 :style="colorVariables">{{ title }}</h2>
+    <h2 :style="colorVariables">
+      {{ title }}
+    </h2>
     <nav>
       <slot />
     </nav>

@@ -1,7 +1,7 @@
 <template>
   <div class="team-project">
     <TaskList :tasks="tasks" />
-    <TaskTimeline :tasks="tasks"  />
+    <TaskTimeline :tasks="tasks" />
   </div>
 </template>
 

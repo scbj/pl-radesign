@@ -1,15 +1,21 @@
 <template>
   <SideBarGroup title="Skills">
-      <ul>
-        <li v-for="(item, key) in items" :key="key">
-          <router-link :to="'/skill/'+ item.label" class="link" active-class="active">
-            <span class="indicator" />
-            <h4 class="label">{{ item.label }}</h4>
-            <span class="count">{{ item.count }}</span>
-          </router-link>
-        </li>
-      </ul>
-    </SideBarGroup>
+    <ul>
+      <li v-for="(item, key) in items" :key="key">
+        <router-link
+          :to="'/skill/'+ item.label"
+          class="link"
+          active-class="active"
+        >
+          <span class="indicator" />
+          <h4 class="label">
+            {{ item.label }}
+          </h4>
+          <span class="count">{{ item.count }}</span>
+        </router-link>
+      </li>
+    </ul>
+  </SideBarGroup>
 </template>
 
 <script>

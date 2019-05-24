@@ -1,14 +1,20 @@
 <template>
   <SideBarGroup title="Menu" color="#ed0a20">
-      <ul>
-        <li v-for="item in items" :key="item.path">
-          <router-link :to="item.path" class="link" active-class="active">
-            <BaseIcon :name="item.icon" />
-            <h3 class="label">{{ item.label }}</h3>
-          </router-link>
-        </li>
-      </ul>
-    </SideBarGroup>
+    <ul>
+      <li v-for="item in items" :key="item.path">
+        <router-link
+          :to="item.path"
+          class="link"
+          active-class="active"
+        >
+          <BaseIcon :name="item.icon" />
+          <h3 class="label">
+            {{ item.label }}
+          </h3>
+        </router-link>
+      </li>
+    </ul>
+  </SideBarGroup>
 </template>
 
 <script>
