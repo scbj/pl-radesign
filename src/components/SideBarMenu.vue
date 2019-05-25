@@ -35,7 +35,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/styles/animation.scss';
+
 $highlight-color: #2e65fd;
+$transition: .3s $easing;
 
 .link {
   border-left: .2em solid transparent;
@@ -44,7 +46,7 @@ $highlight-color: #2e65fd;
   flex-wrap: nowrap;
   align-items: center;
 
-  transition: background 2s ease-out;
+  transition: border-color $transition;
 
   &.active {
     background: linear-gradient(to right, rgba($highlight-color, 12%), rgba($highlight-color, 1.2%));
@@ -65,6 +67,10 @@ $highlight-color: #2e65fd;
   }
 }
 
+.label {
+  transition: color $transition;
+}
+
 .base-icon {
   fill: var(--color-light-5);
   margin: 1em 1.4em;
@@ -72,5 +78,7 @@ $highlight-color: #2e65fd;
   $size: 1.8em;
   height: $size;
   width: $size;
+
+  transition: fill $transition;
 }
 </style>

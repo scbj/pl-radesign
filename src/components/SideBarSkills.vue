@@ -34,7 +34,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/styles/animation.scss';
+
 $highlight-color: #2e65fd;
+$transition: .3s $easing;
 
 .link {
   margin: 1.5em 1.2em;
@@ -69,11 +72,13 @@ $highlight-color: #2e65fd;
   $size: .7em;
   width: $size;
   height: $size;
+  transition: background $transition;
 }
 
 .label {
   flex-grow: 1;
   margin-left: 1.3em;
+  transition: color $transition;
 }
 
 .count {
@@ -83,5 +88,6 @@ $highlight-color: #2e65fd;
   font-size: 0.7rem;
   font-weight: 600;
   padding: .2em .5em;
+  transition: all $transition;
 }
 </style>
