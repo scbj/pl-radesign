@@ -3,12 +3,12 @@
     <div class="controls">
       <div class="month">
         <h2>April 3, 2019 </h2>
-        <BaseIcon class="next-month" name="chevron-right" />
+        <BaseButtonIcon class="button-next" name="chevron-right" />
       </div>
       <div class="scale">
         Day Week Month Year
       </div>
-      <BaseIcon class="add-task" name="add" />
+      <BaseButtonIcon name="add" />
     </div>
     <div class="timeline">
       <template v-for="(task, index) in tasks">
@@ -104,14 +104,8 @@ export default {
   justify-content: space-between;
   padding: 3rem;
 
-  .next-month {
+  .button-next {
     margin-left: 1rem;
-  }
-
-  .add-task,
-  .next-month {
-      fill: #2e65fd;
-      cursor: pointer;
   }
 }
 

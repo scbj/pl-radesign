@@ -17,8 +17,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/styles/animation.scss';
-
 .app-content {
   overflow: hidden;
 }

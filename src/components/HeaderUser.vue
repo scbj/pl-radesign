@@ -38,6 +38,7 @@
   > img {
     background-color: var(--color-light-2);
     border-radius: 50%;
+    display: block;
     $size: 3.5rem;
     width: $size;
     height: $size;

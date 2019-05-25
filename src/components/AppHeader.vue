@@ -1,26 +1,25 @@
 <template>
   <header class="app-header">
-    <BaseIcon class="icon-search" name="search" />
-    <div class="search">
-      <span>Search for members and works...</span>
-    </div>
-    <div class="separator" />
+    <HeaderSearch />
+    <b class="separator" />
     <div class="notification">
-      <BaseIcon name="bell" />
+      <BaseButtonIcon name="bell" />
     </div>
-    <div class="separator" />
-    <BaseIcon name="cog" />
-    <div class="separator" />
+    <b class="separator" />
+    <BaseButtonIcon name="cog" />
+    <b class="separator" />
     <HeaderUser class="profil" />
   </header>
 </template>
 
 <script>
 import '../assets/icons'
+import HeaderSearch from '@/components/HeaderSearch.vue'
 import HeaderUser from '@/components/HeaderUser.vue'
 
 export default {
   components: {
+    HeaderSearch,
     HeaderUser
   }
 }
@@ -35,9 +34,8 @@ export default {
   align-items: center;
 }
 
-.search {
+.header-search {
   flex-grow: 1;
-  cursor: text;
 }
 
 .separator {
@@ -45,36 +43,23 @@ export default {
   border-right: var(--border-1)
 }
 
-.base-icon {
-  margin: 0 1.5rem;
-
-  &.icon-search {
-    margin-left: 2.7rem;
-    margin-right: 1.8rem;
-  }
-}
-
-.notification {
+.base-button-icon {
   margin: 0 1.5rem;
   position: relative;
+}
 
-  & > .base-icon {
-    margin: 0;
-  }
-
-  &::after {
-    content: '';
-    background: #ed0a20;
-    border: .11rem solid;
-    border-color: var(--color-light-1);
-    border-radius: 50%;
-    $size: .8rem;
-    width: $size;
-    height: $size;
-    position: absolute;
-    top: -0.3rem;
-    right: .1rem;
-  }
+.notification .base-button-icon::after {
+  content: '';
+  background: #ed0a20;
+  border: .11rem solid;
+  border-color: var(--color-light-1);
+  border-radius: 50%;
+  $size: .8rem;
+  width: $size;
+  height: $size;
+  position: absolute;
+  top: -0.3rem;
+  right: .1rem;
 }
 
 .profil {
