@@ -7,19 +7,26 @@
 </template>
 
 <style lang="scss" scoped>
+@import '@/assets/styles/animation.scss';
+
+.app-content {
+  overflow: hidden;
+}
+
 .fade-enter-active,
 .fade-leave-active {
-  transition:
-    opacity .1s ease-out;
+  transition: all .4s $easing;
 }
 
 .fade-enter-to,
 .fade-leave {
   opacity: 1;
+  transform: translateX(0px);
 }
 
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+  transform: translateX(-2em);
 }
 </style>
