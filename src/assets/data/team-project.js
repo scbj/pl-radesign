@@ -47,7 +47,7 @@ export const tasks = [
       { avatar: randomAvatar() },
       { avatar: randomAvatar() }
     ],
-    color: { r: 255, g: 119, b: 31 },
+    color: { r: 255, g: 140, b: 31 },
     dayCount: 12,
     dayStart: 3
   },

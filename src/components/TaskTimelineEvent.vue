@@ -99,6 +99,7 @@ $easing: cubic-bezier(.19, 1, .22, 1);
 }
 
 .label {
+  font-weight: 500;
   flex-grow: 1;
 }
 

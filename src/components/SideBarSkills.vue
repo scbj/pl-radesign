@@ -56,6 +56,10 @@ $highlight-color: #2e65fd;
       background: $highlight-color;
     }
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .indicator {

@@ -44,7 +44,7 @@ $highlight-color: #2e65fd;
   align-items: center;
 
   &.active {
-    background: linear-gradient(to right, rgba($highlight-color, 12%), rgba($highlight-color, 0%));
+    background: linear-gradient(to right, rgba($highlight-color, 12%), rgba($highlight-color, 1.2%));
     border-color: $highlight-color;
 
     > .label {
@@ -55,6 +55,10 @@ $highlight-color: #2e65fd;
     > .svg-icon {
       fill: $highlight-color;
     }
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
