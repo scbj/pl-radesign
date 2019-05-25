@@ -70,7 +70,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$easing: cubic-bezier(.19, 1, .22, 1);
+@import '@/assets/styles/animation.scss';
 
 .task-timeline-event {
   font-size: 0.8rem;

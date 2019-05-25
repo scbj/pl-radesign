@@ -34,6 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/styles/animation.scss';
 $highlight-color: #2e65fd;
 
 .link {
@@ -42,6 +43,8 @@ $highlight-color: #2e65fd;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+
+  transition: background 2s ease-out;
 
   &.active {
     background: linear-gradient(to right, rgba($highlight-color, 12%), rgba($highlight-color, 1.2%));
