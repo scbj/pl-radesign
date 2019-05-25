@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import '../assets/icons'
 import HeaderSearch from '@/components/HeaderSearch.vue'
 import HeaderUser from '@/components/HeaderUser.vue'
 

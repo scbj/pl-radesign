@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import '../assets/icons'
 import { menuItems } from '@/assets/data/side-bar'
 import SideBarGroup from '@/components/SideBarGroup.vue'
 
