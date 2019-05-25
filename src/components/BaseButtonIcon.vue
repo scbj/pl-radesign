@@ -1,5 +1,6 @@
 <template>
   <button class="base-button-icon" :style="customProperties">
+    <!-- Adds a special class if a color is specified to preserve the orignale one -->
     <BaseIcon :name="name" :class="{ fill: !!color }" />
   </button>
 </template>
@@ -33,7 +34,6 @@ export default {
   border: none;
   outline: none;
   font-size: inherit;
-
   cursor: pointer;
 
   .base-icon.fill {

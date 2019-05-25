@@ -14,6 +14,7 @@ export const router = new Router({
     {
       path: '/home',
       name: 'home',
+      // Enable async loading with this syntax
       component: () => import('@/views/Home.vue'),
       meta: {
         title: 'Home - Radesign P.L.'

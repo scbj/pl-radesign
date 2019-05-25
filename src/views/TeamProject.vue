@@ -1,5 +1,6 @@
 <template>
   <div class="team-project">
+    <!-- TODO: Why not use the store? -->
     <TaskList :tasks="tasks" />
     <TaskTimeline :tasks="tasks" />
   </div>

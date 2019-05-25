@@ -19,6 +19,7 @@ export default {
 
   computed: {
     iconName () {
+      // Matches the name of the assets
       return `icon-noun-${this.name}`
     }
   }

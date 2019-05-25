@@ -47,6 +47,7 @@ export default {
     },
 
     members () {
+      // Prevents runtime errors due to an empty array
       return this.task.members || []
     }
   },
@@ -56,6 +57,7 @@ export default {
   },
 
   beforeDestroy () {
+    // Manages memory leaks by removing the handler
     EventBus.$off('ui@task-highlighting:toggle', this.highlight)
   },
 
@@ -71,6 +73,8 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/styles/animation.scss';
+
+// TODO: Too much complexity in style, need to be refactored.
 
 .task-timeline-event {
   font-size: 0.8rem;

@@ -38,8 +38,8 @@ export default {
 }
 
 .separator {
+  border-right: var(--border-1);
   align-self: stretch;
-  border-right: var(--border-1)
 }
 
 .base-button-icon {
@@ -50,7 +50,7 @@ export default {
 .notification .base-button-icon::after {
   content: '';
   background: #ed0a20;
-  border: .11rem solid;
+  border: 2px solid;
   border-color: var(--color-light-1);
   border-radius: 50%;
   $size: .8rem;

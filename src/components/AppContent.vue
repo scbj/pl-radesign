@@ -18,6 +18,8 @@ export default {
 
 <style lang="scss" scoped>
 .app-content {
+  /* Need to set overflow: hidden to prevent the scrollbar from
+  appearing when transitions between pages. */
   overflow: hidden;
 }
 </style>

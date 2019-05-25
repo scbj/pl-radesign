@@ -1,3 +1,8 @@
+/**
+ * Sort the specified array by getting the value to compare with a getter.
+ * @param {*} array The array to sort
+ * @param {*} value The function that retrieves the value to compare
+ */
 export function sort (array, value) {
   const compare = (a, b) => {
     // Get the value of a
