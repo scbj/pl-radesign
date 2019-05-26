@@ -44,5 +44,10 @@ export default {
   flex-direction: column;
   flex-grow: 1;
   overflow-y: auto;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 </style>
