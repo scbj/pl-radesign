@@ -12,12 +12,14 @@
 </template>
 
 <script>
-import AppContent from '@/components/AppContent.vue'
-import AppHeader from '@/components/AppHeader.vue'
-import AppInfos from '@/components/AppInfos.vue'
 import AppSideBar from '@/components/AppSideBar.vue'
+import AppHeader from '@/components/AppHeader.vue'
 
 import { EventBus } from '@/reactivity/event-bus.js'
+
+// Async components
+const AppContent = () => import('@/components/AppContent.vue')
+const AppInfos = () => import('@/components/AppInfos.vue')
 
 export default {
   components: {

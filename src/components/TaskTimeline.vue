@@ -129,6 +129,7 @@ export default {
   align-items: center;
   padding: 3rem;
   padding-top: 0;
+  position: relative;
 }
 
 .task-name {
@@ -144,6 +145,7 @@ export default {
 
 .separator {
   z-index: 1;
+  position: relative;
   background: var(--color-light-3);
   width: 1px;
   grid-row: 1 / -1;
@@ -155,6 +157,7 @@ export default {
 
 .event {
   z-index: 2;
+  position: relative;
   grid-column: var(--column);
   grid-row: var(--row);
 }
