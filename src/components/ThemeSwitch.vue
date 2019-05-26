@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { EventBus } from '@/event-bus.js'
+import { EventBus } from '@/reactivity/event-bus.js'
 
 export default {
   data () {

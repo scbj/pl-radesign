@@ -3,34 +3,43 @@
     <AppContent />
     <AppHeader />
     <AppSideBar>
-      <h1>Radesign</h1>
+      <h1 @click="showInformations = true">
+        Radesign
+      </h1>
     </AppSideBar>
+    <AppInfos v-if="showInformations" />
   </div>
 </template>
 
 <script>
 import AppContent from '@/components/AppContent.vue'
 import AppHeader from '@/components/AppHeader.vue'
+import AppInfos from '@/components/AppInfos.vue'
 import AppSideBar from '@/components/AppSideBar.vue'
 
-import { EventBus } from '@/event-bus.js'
+import { EventBus } from '@/reactivity/event-bus.js'
 
 export default {
   components: {
     AppContent,
     AppHeader,
+    AppInfos,
     AppSideBar
   },
 
   data () {
     return {
-      desaturate: false
+      desaturate: false,
+      showInformations: false
     }
   },
 
   mounted () {
     EventBus.$on('ui@theme:change', theme => {
       this.desaturate = theme === 'moon'
+    })
+    EventBus.$on('ui@infos:close', () => {
+      this.showInformations = false
     })
   }
 }
@@ -62,6 +71,10 @@ export default {
 .app-content { grid-area: content }
 .app-header { grid-area: header }
 .app-side-bar { grid-area: side-bar }
+.app-infos {
+  grid-area: 1 / 1 / -1 / -1;
+  z-index: 100;
+}
 
 .app-header,
 .app-side-bar {
@@ -74,6 +87,7 @@ export default {
 
   h1 {
     margin: 1.5rem;
+    cursor: pointer;
   }
 }
 </style>
