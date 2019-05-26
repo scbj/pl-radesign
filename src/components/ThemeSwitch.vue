@@ -10,10 +10,18 @@
 </template>
 
 <script>
+import { EventBus } from '@/event-bus.js'
+
 export default {
   data () {
     return {
       activeTheme: 'sun'
+    }
+  },
+
+  watch: {
+    activeTheme (theme) {
+      EventBus.$emit('ui@theme:change', theme)
     }
   },
 

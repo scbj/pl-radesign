@@ -3,12 +3,16 @@
     <div class="controls">
       <div class="month">
         <h2>April 3, 2019 </h2>
-        <BaseButtonIcon class="button-next" name="chevron-right" />
+        <BaseButtonIcon
+          class="button-next"
+          name="chevron-right"
+          color="#2e65fd"
+        />
       </div>
       <div class="scale">
         Day Week Month Year
       </div>
-      <BaseButtonIcon name="add" />
+      <BaseButtonIcon name="add" color="#2e65fd" />
     </div>
     <div class="timeline">
       <template v-for="(task, index) in tasks">

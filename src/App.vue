@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{ desaturate }">
     <AppContent />
     <AppHeader />
     <AppSideBar>
@@ -13,11 +13,25 @@ import AppContent from '@/components/AppContent.vue'
 import AppHeader from '@/components/AppHeader.vue'
 import AppSideBar from '@/components/AppSideBar.vue'
 
+import { EventBus } from '@/event-bus.js'
+
 export default {
   components: {
     AppContent,
     AppHeader,
     AppSideBar
+  },
+
+  data () {
+    return {
+      desaturate: false
+    }
+  },
+
+  mounted () {
+    EventBus.$on('ui@theme:change', theme => {
+      this.desaturate = theme === 'moon'
+    })
   }
 }
 </script>
@@ -37,6 +51,12 @@ export default {
     "side-bar header"
     "side-bar content";
   min-height: 100vh;
+  transition: filter 200ms ease-out;
+
+  &.desaturate {
+    filter: saturate(0);
+    transition-duration: 400ms;
+  }
 }
 
 .app-content { grid-area: content }
