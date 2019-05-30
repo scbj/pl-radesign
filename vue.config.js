@@ -1,3 +1,4 @@
 module.exports = {
-  publicPath: '/pl-radesign/'
+  publicPath: '/pl-radesign/',
+  baseUrl: '/pl-radesign/'
 }
