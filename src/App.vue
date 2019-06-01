@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{ desaturate }">
+  <div id="app" :class="{ blurred, desaturate }">
     <AppContent />
     <AppHeader />
     <AppSideBar>
@@ -36,6 +36,12 @@ export default {
     }
   },
 
+  computed: {
+    blurred () {
+      return this.showInformations
+    }
+  },
+
   mounted () {
     EventBus.$on('ui@theme:change', theme => {
       this.desaturate = theme === 'moon'
@@ -68,6 +74,10 @@ export default {
     filter: saturate(0);
     transition-duration: 400ms;
   }
+
+  &.blurred > *:not(.app-infos){
+    filter: blur(12px);
+  }
 }
 
 .app-content { grid-area: content }
@@ -76,6 +86,7 @@ export default {
 .app-infos {
   grid-area: 1 / 1 / -1 / -1;
   z-index: 100;
+  height: 100vh;
 }
 
 .app-header,
